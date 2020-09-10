@@ -1,0 +1,31 @@
+doctype html
+html(lang="en" dir="rtl")
+  head
+    meta(charset="utf-8")
+    meta(name="author" content="Website name")
+    meta(name="description" content="Main Title")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    block headTitle
+      title default title
+
+    block styles
+      link(rel="shortcut icon" href="./images/logoMin.png")
+      link(rel="stylesheet" type="text/css" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css")
+      link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css")
+      link(rel="stylesheet" type="text/css" href="./main.css")
+
+  body
+    noscript
+      div(class="alert alert-danger" role="alert").
+        The website may not work as intended to be, since there is a heavy depends on Javascript and now it's disabled in your browser, please 
+        #[a(href="https://www.enable-javascript.com/" target="_blank" class="alert-link") enable it], then reload the page.
+    include ../shared/_navbar
+    block content
+    include ../shared/_footer
+
+    block scripts
+      script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
+      script(src='https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js')
+      script(src="./scripts/main.js")
