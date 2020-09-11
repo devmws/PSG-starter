@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) ![](https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white) ![](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 # Clarifying the definition 
 ---
-> [*PSG*](https://github.com/devmws/PSG-startup) is a shorthand of three separated web developments techniques represented in:
+> [*PSG*](https://github.com/mw-shublaq/psg-starter) is a shorthand of three separated web developments techniques represented in:
 - [**P**UG](https://pugjs.org/api/getting-started.html) - HTML Template engine (Aka Jade)
 - [**S**CSS](https://sass-lang.com/) - CSS Preprocessor language
 - [**G**ulp](https://gulpjs.com/) - Task runner
@@ -13,20 +13,20 @@
 ---
 *PSG* has been developed over the node package manager **(NPM)**, the main purpose of it is to be a simple, clear, optimized, and time-saving starter project for web developers, especially the Front-End ones who would like to work on a tidy structure that follows the best practice.
 
-*PSG* repository will receive monthly updates to make sure that it always has the latest stable versions of the packages we are using.
-# Techicllay, what *PSG* can do? [![Only 37 Kb](https://badge-size.herokuapp.com/Naereen/StrapDown.js/master/strapdown.min.js)](https://github.com/Naereen/StrapDown.js/blob/master/strapdown.min.js)
+*PSG* repository will receive monthly updates to make sure that it always has the latest stable versions of the packages in use.
+# Technically, what *PSG* can do? [![Only 37 Kb](https://badge-size.herokuapp.com/Naereen/StrapDown.js/master/strapdown.min.js)](https://github.com/Naereen/StrapDown.js/blob/master/strapdown.min.js)
 
-> With the help of GULP tasks, SPG can do the following:
+> With the help of GULP tasks, PSG can do the following:
 1. Compiling .PUG pages into plain HTML which the browser can render.
-2. Compiling .SCSS files to plain CSS which the browser can apply.
+2. Compiling .SCSS files to plain CSS which the browser can read.
 3. Minifying all file types as follows:
    - For CSS, Generating only one .scss file which will be compiled and minified.
    - For JS, Minifying all JavaScript files.
    - For Media, Compressing all images without touching the quality.
 4. Creating a live preview server locally which detects any changes on the code.
-5. Moving fonts from /src directory (if there were any), to /dist.
-6.  Compressing /dist directory into a Zip file.
-7.  Compressing /src directory into a Zip file.
+5. Copying fonts directory along side other important folders from /src (if there were any), to /dist.
+6. Compressing /dist directory into a Zip file.
+7. Compressing /src directory into a Zip file.
 
 When working with files, we will notice that we followed the rule of *Divide and conquer*, since there is a separate Js file for each task, which would make the process much easier when testing, executing or debugging.
 
