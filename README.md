@@ -18,7 +18,7 @@
 
 > With the help of GULP tasks, PSG can do the following:
 1. Compiling .PUG pages into plain HTML which the browser can render.
-2. Compiling .SCSS files to plain CSS which the browser can read.
+2. Compiling .SCSS styles to plain CSS which the browser can read.
 3. Minifying all file types as follows:
    - For CSS, Generating only one .scss file which will be compiled and minified.
    - For JS, Minifying all JavaScript files.
@@ -28,7 +28,7 @@
 6. Compressing /dist directory into a Zip file.
 7. Compressing /src directory into a Zip file.
 
-When working with files, we will notice that we followed the rule of *Divide and conquer*, since there is a separate Js file for each task, which would make the process much easier when testing, executing or debugging.
+When working with files, you will notice that we followed the rule of *Divide and conquer*, since there is a separate Js file for each task, which would make the process much easier when testing, executing and debugging.
 
 All of the tasks above are linked with ***Watchers***, which means any change will be detected immediately and apply the corresponding tasks for it.
 
@@ -58,7 +58,7 @@ $ cd psg-starter
 $ npm i
 $ gulp
 ```
-after executing the above commands, if everything goes well with you, it will automatically open the default browser on your system and navigating to the server which just created locally.
+after executing the above commands, if everything goes well with you, it will automatically open the default browser on your system and navigate to the server which just created locally.
 All that you need to do now is applying some changes, then the watchers will start running. 
 
 # License ![](https://img.shields.io/pypi/l/ansicolortags.svg)
@@ -66,4 +66,5 @@ All that you need to do now is applying some changes, then the watchers will sta
 ----
 
 MIT - Massachusetts Institute of Technology
+
 **Free Software, Hell Yeah!**
