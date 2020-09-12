@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) ![](https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white) ![](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 # Clarifying the definition 
 ---
-> [*PSG*](https://github.com/mw-shublaq/psg-starter) is a shorthand of three separated web developments techniques represented in:
+> [*PSG*](https://github.com/mw-shublaq/psg-starter) is a shorthand of three separated web development techniques represented in:
 - [**P**UG](https://pugjs.org/api/getting-started.html) - HTML Template engine (Aka Jade)
 - [**S**CSS](https://sass-lang.com/) - CSS Preprocessor language
 - [**G**ulp](https://gulpjs.com/) - Task runner
