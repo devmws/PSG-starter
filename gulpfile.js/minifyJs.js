@@ -10,7 +10,7 @@ let minifyJs = () => {
 		.src('./src/scripts/*.js')
 		.pipe(concat('main.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('./dist/scripts/'));
+		.pipe(gulp.dest('./dist'));
 };
 
 module.exports = minifyJs;

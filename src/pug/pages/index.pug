@@ -1,14 +1,12 @@
 extends ../layouts/default
 
-block headTitle
-  title index title
+block pageTitle
+  title Home
 
-block append styles
-  link(rel="stylesheet" href="../test.css")
+block navbar
+  - let activePage = "home";
+  include ../shared/_navbar
 
 block content
   main.index-page
-    h1 test2
-
-block append scripts
-  script(src="./test.js")
+    h1 This is #[span.text-primary Home(Index)] page

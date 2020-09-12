@@ -16,7 +16,7 @@ let compileScss = () => {
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(concat('main.css'))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./dist/pages'));
+		.pipe(gulp.dest('./dist'));
 };
 
 module.exports = compileScss;

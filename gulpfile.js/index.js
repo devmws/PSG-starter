@@ -35,12 +35,12 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 exports.generateDistFolder = gulp.parallel(compilePugTask, compileScssTask, minifyJsTask, moveFontsTask, minifyPicsTask);
 let watchTask = async () => {
-  browserSync.init({ server: { baseDir: './dist/pages' } });
+  browserSync.init({ server: { baseDir: './dist' } });
   gulp.watch('./src/pug/**/*.pug', compilePugTask);
   gulp.watch(['./src/styles/*.scss', './src/styles/**/*.scss'], compileScssTask);
   gulp.watch('./src/fonts/*.*', moveFontsTask);
   gulp.watch(['./src/images/*.*', './src/images/**/*.*'], minifyPicsTask);
   gulp.watch('./src/scripts/*.*', minifyJsTask);
-  gulp.watch('./dist/pages/*.*').on('change', browserSync.reload);
+  gulp.watch('./dist/*.*').on('change', browserSync.reload);
 };
 exports.default = watchTask;

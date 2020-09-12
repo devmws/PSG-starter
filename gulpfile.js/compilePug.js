@@ -8,7 +8,7 @@ let compilePug = () => {
 	return gulp
 		.src('./src/pug/pages/*.pug')
 		.pipe(pug({ pretty: true }))
-		.pipe(gulp.dest('./dist/pages'));
+		.pipe(gulp.dest('./dist'));
 };
 
 module.exports = compilePug;

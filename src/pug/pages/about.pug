@@ -1,14 +1,12 @@
 extends ../layouts/default
 
-block headTitle
-  title about page
+block pageTitle
+  title About
 
-block append styles
-  link(rel="stylesheet" href="../test.css")
+block navbar
+  - let activePage = "about";
+  include ../shared/_navbar
 
 block content
-  main.index-page
-    h1 about page1
-
-block append scripts
-  script(src="./test.js")
+  main.about-page
+    h1 This is #[span.text-primary About] page
