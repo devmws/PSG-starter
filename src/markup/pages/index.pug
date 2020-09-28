@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block pageTitle
+	title Home
+
+block navbar
+	- let activePage = "home";
+	include ../components/navbar
+
+block content
+	main.index-page
+		h1 This is #[span.text-primary Home(Index)] page

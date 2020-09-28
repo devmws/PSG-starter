@@ -1,0 +1,23 @@
+// font-sizes in Px
+$font-size: (
+	'xs': 16,
+	'sm': 17,
+	'md': 18,
+	'lg': 17,
+	'xl': 16,
+);
+$default-font-size: map-get($font-size, 'xl') !default;
+
+// Themes and coloring
+$theme: 'light';
+@if ($theme == 'light') {
+	$theme-colors: (
+		'primary': #0074d9,
+		'danger': #ff4136,
+	) !global;
+} @else if ($theme == 'dark') {
+	$theme-colors: (
+		'primary': #000,
+		'danger': #8a0700,
+	) !global;
+}

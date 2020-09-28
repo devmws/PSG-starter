@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block pageTitle
+	title Features
+
+block navbar
+	- let activePage = "features";
+	include ../components/navbar
+
+block content
+	main.features-page
+		h1 This is  #[span.text-primary Features] page

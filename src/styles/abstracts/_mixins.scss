@@ -1,0 +1,52 @@
+// @include {name}
+
+// Managing mediaQueries
+@mixin media-responsively($breakpoint) {
+	@if ($breakpoint == xs) {
+		@media (min-width: map-get($grid-breakpoints, 'xs')) {
+			@content;
+		}
+	} @else if ($breakpoint == sm) {
+		@media (min-width: map-get($grid-breakpoints, 'sm')) {
+			@content;
+		}
+	} @else if ($breakpoint == md) {
+		@media (min-width: map-get($grid-breakpoints, 'md')) {
+			@content;
+		}
+	} @else if ($breakpoint == lg) {
+		@media (min-width: map-get($grid-breakpoints, 'lg')) {
+			@content;
+		}
+	} @else if ($breakpoint == xl) {
+		@media (min-width: map-get($grid-breakpoints, 'xl')) {
+			@content;
+		}
+	}
+}
+
+// Managing centering
+@mixin flex-center($position) {
+	display: flex;
+	@if ($position == 'vertical') {
+		align-items: center;
+	} @else if ($position == 'horizontal') {
+		justify-content: center;
+	} @else {
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+// Square dimensions
+@mixin make-square($size) {
+	width: convertPxToRem($size);
+	height: convertPxToRem($size);
+	overflow: hidden;
+}
+
+// Circle radius
+@mixin make-circle($radius) {
+	@include make-square($radius);
+	border-radius: 50%;
+}

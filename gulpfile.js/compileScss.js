@@ -7,16 +7,22 @@ const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const rename = require('gulp-rename');
+const plumber = require('gulp-plumber');
 
 let compileScss = () => {
 	return gulp
 		.src('./src/styles/main.scss')
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass({ outputStyle: 'expanded' }))
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(concat('main.css'))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('./dist/styles/'))
+		.pipe(sass({ outputStyle: 'compressed' }))
+		.pipe(rename('main.min.css'))
+		.pipe(gulp.dest('./dist/styles/'));
 };
 
 module.exports = compileScss;

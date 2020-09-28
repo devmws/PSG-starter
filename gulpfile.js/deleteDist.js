@@ -3,11 +3,10 @@ feel free to adjust the path of the generated dist folder */
 
 const gulp = require('gulp');
 const clean = require('gulp-clean');
+const plumber = require('gulp-plumber');
 
 let deleteDist = () => {
-  return gulp
-    .src('./dist/', { read: false })
-    .pipe(clean());
+	return gulp.src('./dist/', { read: false }).pipe(plumber()).pipe(clean());
 };
 
 module.exports = deleteDist;

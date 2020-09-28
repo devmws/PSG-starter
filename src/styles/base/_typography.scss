@@ -1,0 +1,23 @@
+html {
+	// Explicitly set font-size
+	@include media-responsively(xs) {
+		$default-font-size: convertPxToRem(map-get($font-size, 'xs'));
+		font-size: #{map-get($font-size, 'xs')}px;
+	}
+	@include media-responsively(sm) {
+		$default-font-size: convertPxToRem(map-get($font-size, 'sm'));
+		font-size: #{map-get($font-size, 'sm')}px;
+	}
+	@include media-responsively(md) {
+		$default-font-size: convertPxToRem(map-get($font-size, 'md'));
+		font-size: #{map-get($font-size, 'md')}px;
+	}
+	@include media-responsively(lg) {
+		$default-font-size: convertPxToRem(map-get($font-size, 'lg'));
+		font-size: #{map-get($font-size, 'lg')}px;
+	}
+	@include media-responsively(xl) {
+		$default-font-size: convertPxToRem(map-get($font-size, 'xl'));
+		font-size: #{map-get($font-size, 'xl')}px;
+	}
+}

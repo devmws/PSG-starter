@@ -1,9 +1,21 @@
-@import 'scss/footer';
-@import 'scss/header';
+@import './abstracts/variables';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './abstracts/mixins';
+@import './abstracts/placeholders';
+@import './abstracts/functions';
+
+@import './base/base';
+@import './base/animations';
+@import './base/typography';
+@import './base/utils';
+
+@import './components/footer';
+@import './components/navbar';
 
 // style here just for testing, remove it later
 main {
-  height: 88vh;
-  text-align: center;
-  padding: 50px;
+	height: calc(100vh - #{convertPxToRem(76 + 40)});
+	text-align: center;
+	padding: convertPxToRem(10);
 }

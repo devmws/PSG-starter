@@ -1,0 +1,29 @@
+doctype html
+html(lang="en" dir="ltr")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(name="author" content="Website name")
+		meta(name="description" content="Main Title")
+
+		block pageTitle
+
+		block styles
+			link(rel="shortcut icon" href="./media/images/logoMin.png")
+			link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css")
+			link(rel="stylesheet" type="text/css" href="./styles/main.min.css")
+
+	body
+		noscript
+			div.alert.alert-danger(role="alert").
+				The website may not work as intended to be, since there is a heavy depends on Javascript and now it's disabled in your browser, please
+				#[a.alert-link(href="https://www.enable-javascript.com/" target="_blank") enable it], then reload the page.
+
+		block navbar
+
+		block content
+
+		include ../components/footer
+		block scripts
+			script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
+			script(type="module" src="./scripts/main.min.js")
