@@ -66,6 +66,9 @@ and as dependency:
 | Bootstrap | https://getbootstrap.com | ^4.5
 <br>
 Bootstrap is our main CSS framework, and it can be very easily unintegrated if you wish not using it.
+<br>
+<br>
+
 # Installation
 
 PSG requires [Node.js](https://nodejs.org/) v4+ to run.
