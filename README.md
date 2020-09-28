@@ -85,8 +85,6 @@ All what you need to do now is to **save** (even if there was no changes made) a
 
 # License ![](https://img.shields.io/pypi/l/ansicolortags.svg) ![](https://badgen.net/badge/Open%20Source/Yes%21/blue?icon=github)
 
----
-
 MIT - Massachusetts Institute of Technology
 
 **Free Software, Hell Yeah!**
