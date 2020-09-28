@@ -42,7 +42,7 @@ All of the tasks above are linked with **_Watchers_**, which means any change wi
 
 ---
 
-_PSG_ is using number of development dependencies and packages, here are they:
+_PSG_ is using number of development dependencies, here are they:
 | Plugin name | source | version |
 | ------- | ------- | ------ |
 | browser-sync | https://www.npmjs.com/package/browser-sync | ^2.26.12
@@ -58,7 +58,13 @@ _PSG_ is using number of development dependencies and packages, here are they:
 | gulp-sourcemaps | https://www.npmjs.com/package/gulp-sourcemaps | ^2.6.5
 | gulp-uglify | https://www.npmjs.com/package/gulp-uglify | ^3.0.2"
 | gulp-zip | https://www.npmjs.com/package/gulp-zip | ^5.0.2
+<br>
 
+and as dependency:
+| Plugin name | source | version |
+| ------- | ------- | ------ |
+| Bootstrap | https://getbootstrap.com | ^4.5
+Bootstrap is our main CSS framework, and it can be very easily unintegrated if you wish not using it.
 # Installation
 
 PSG requires [Node.js](https://nodejs.org/) v4+ to run.
