@@ -1,6 +1,6 @@
 {
 	"name": "psg-starter",
-	"version": "1.7",
+	"version": "1.7.0",
 	"description": "psg-starter is a fast, time saving structure to start coding as a Front-End developer using the three main parts (Pug, Sass, Gulp)",
 	"main": "index.js",
 	"repository": {
