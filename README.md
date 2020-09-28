@@ -64,6 +64,7 @@ and as dependency:
 | Plugin name | source | version |
 | ------- | ------- | ------ |
 | Bootstrap | https://getbootstrap.com | ^4.5
+<br>
 Bootstrap is our main CSS framework, and it can be very easily unintegrated if you wish not using it.
 # Installation
 
