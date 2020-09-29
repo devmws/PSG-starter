@@ -1,68 +1,43 @@
-const compilePug = require('./compilePug');
-async function compilePugTask() {
-	return compilePug();
-}
-exports.compilePug = compilePugTask;
+// Importing main tasks
+const compilePug  = async () => { return require('./compilePug')() };
+const compileScss = async () => { return require('./compileScss')() };
+const minifyJs    = async () => { return require('./minifyJs')() };
+const moveRelated = async () => { return require('./moveRelated')() };
+const minifyPics  = async () => { return require('./minifyPics')() };
+const deleteDist  = async () => { return require('./deleteDist')() };
+const zipProd     = async () => { return require('./zipProd')() };
+const zipDev      = async () => { return require('./zipDev')(); };
 
-const compileScss = require('./compileScss');
-async function compileScssTask() {
-	return compileScss();
-}
-exports.compileScss = compileScssTask;
-
-const minifyJs = require('./minifyJs');
-async function minifyJsTask() {
-	return minifyJs();
-}
-exports.minifyJs = minifyJsTask;
-
-const moveRelated = require('./moveRelated');
-async function moveRelatedTask() {
-	return moveRelated();
-}
-exports.moveRelated = moveRelatedTask;
-
-const minifyPics = require('./minifyPics');
-async function minifyPicsTask() {
-	return minifyPics();
-}
-exports.minifyPics = minifyPicsTask;
-
-const deleteDist = require('./deleteDist');
-async function deleteDistTask() {
-	return deleteDist();
-}
-exports.deleteDist = deleteDistTask;
-
-const zipProd = require('./zipProd');
-async function zipProdTask() {
-	return zipProd();
-}
-exports.zipProd = zipProdTask;
-
-const zipDev = require('./zipDev');
-async function zipDevTask() {
-	return zipDev();
-}
-exports.zipDev = zipDevTask;
-
-// Watchers, custom tasks, and live-reload server
+// Watchers, initialization and custom tasks, and live-reload server
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-exports.generateDistFolder = gulp.parallel(
-	compilePugTask,
-	compileScssTask,
-	moveRelatedTask,
-	minifyPicsTask,
-	minifyJsTask
+const generateDistFolder = gulp.parallel(
+	compilePug,
+	compileScss,
+	moveRelated,
+	minifyPics,
+	minifyJs
 );
-let watchTask = async () => {
+const watcher = async () => {
 	browserSync.init({ server: { baseDir: './dist' } });
-	gulp.watch('./src/markup/**/*.pug', compilePugTask);
-	gulp.watch('./src/styles/**/*.scss', compileScssTask);
-	gulp.watch('./src/fonts/**/*.*', moveRelatedTask);
-	gulp.watch('./src/media/**/*.*', minifyPicsTask);
-	gulp.watch('./src/scripts/*.*', minifyJsTask);
+	gulp.watch('./src/markup/**/*.pug', compilePug);
+	gulp.watch('./src/styles/**/*.scss', compileScss);
+	gulp.watch('./src/fonts/**/*.*', moveRelated);
+	gulp.watch('./src/media/**/*.*', minifyPics);
+	gulp.watch('./src/scripts/*.*', minifyJs);
 	gulp.watch('./dist/**/*.*').on('change', browserSync.reload);
 };
-exports.default = watchTask;
+
+// Export all tasks
+module.exports = {
+	compilePug,
+	compileScss,
+	minifyJs,
+	moveRelated,
+	minifyPics,
+	deleteDist,
+	zipProd,
+	zipDev,
+	generateDistFolder,
+	default: watcher
+};
