@@ -1,12 +1,12 @@
 // Importing main tasks
-const compilePug  = async () => { return require('./compilePug')() };
-const compileScss = async () => { return require('./compileScss')() };
-const minifyJs    = async () => { return require('./minifyJs')() };
-const moveRelated = async () => { return require('./moveRelated')() };
-const minifyPics  = async () => { return require('./minifyPics')() };
-const deleteDist  = async () => { return require('./deleteDist')() };
-const zipProd     = async () => { return require('./zipProd')() };
-const zipDev      = async () => { return require('./zipDev')(); };
+const compilePug  = () => { return require('./compilePug')() };
+const compileScss = () => { return require('./compileScss')() };
+const minifyJs    = () => { return require('./minifyJs')() };
+const moveRelated = () => { return require('./moveRelated')() };
+const minifyPics  = () => { return require('./minifyPics')() };
+const deleteDist  = () => { return require('./deleteDist')() };
+const zipProd     = () => { return require('./zipProd')() };
+const zipDev      = () => { return require('./zipDev')(); };
 
 // Watchers, initialization and custom tasks, and live-reload server
 const gulp = require('gulp');
