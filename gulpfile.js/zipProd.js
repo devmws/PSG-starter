@@ -5,12 +5,10 @@ const gulp = require('gulp');
 const zip = require('gulp-zip');
 const plumber = require('gulp-plumber');
 
-let zipProd = () => {
+module.exports = () => {
 	return gulp
 		.src(['./dist/**/*.*', '!./dist/production.zip'])
 		.pipe(plumber())
 		.pipe(zip('production.zip'))
 		.pipe(gulp.dest('./dist/'));
 };
-
-module.exports = zipProd;

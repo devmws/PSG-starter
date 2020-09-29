@@ -5,7 +5,7 @@ const gulp = require('gulp');
 const zip = require('gulp-zip');
 const plumber = require('gulp-plumber');
 
-let zipDev = () => {
+module.exports = () => {
 	return gulp
 		.src([
 			'./**/*.*',
@@ -17,5 +17,3 @@ let zipDev = () => {
 		.pipe(zip('development.zip'))
 		.pipe(gulp.dest('./'));
 };
-
-module.exports = zipDev;

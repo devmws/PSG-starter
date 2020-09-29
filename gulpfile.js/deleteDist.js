@@ -5,8 +5,6 @@ const gulp = require('gulp');
 const clean = require('gulp-clean');
 const plumber = require('gulp-plumber');
 
-let deleteDist = () => {
+module.exports = () => {
 	return gulp.src('./dist/', { read: false }).pipe(plumber()).pipe(clean());
 };
-
-module.exports = deleteDist;

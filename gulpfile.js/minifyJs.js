@@ -7,7 +7,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const plumber = require('gulp-plumber');
 
-let minifyJs = () => {
+module.exports = () => {
 	return gulp
 		.src([
 			'./src/scripts/**/*.js',
@@ -20,5 +20,3 @@ let minifyJs = () => {
 		.pipe(rename('main.min.js'))
 		.pipe(gulp.dest('./dist/scripts/'));
 };
-
-module.exports = minifyJs;

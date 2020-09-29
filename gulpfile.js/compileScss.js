@@ -10,7 +10,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const plumber = require('gulp-plumber');
 
-let compileScss = () => {
+module.exports = () => {
 	return gulp
 		.src('./src/styles/main.scss')
 		.pipe(plumber())
@@ -24,5 +24,3 @@ let compileScss = () => {
 		.pipe(rename('main.min.css'))
 		.pipe(gulp.dest('./dist/styles/'));
 };
-
-module.exports = compileScss;

@@ -6,12 +6,10 @@ const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber');
 const cache = require('gulp-cache');
 
-let minifyPics = () => {
+module.exports = () => {
 	return gulp
 		.src('./src/media/**/*.*')
 		.pipe(plumber())
 		.pipe(cache(imagemin({ verbose: true })))
 		.pipe(gulp.dest('./dist/media'));
 };
-
-module.exports = minifyPics;
