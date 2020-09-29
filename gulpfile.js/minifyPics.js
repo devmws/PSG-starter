@@ -4,12 +4,13 @@ feel free to change the src/dest */
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber');
+const cache = require('gulp-cache');
 
 let minifyPics = () => {
 	return gulp
 		.src('./src/media/**/*.*')
 		.pipe(plumber())
-		.pipe(imagemin({ verbose: true }))
+		.pipe(cache(imagemin({ verbose: true })))
 		.pipe(gulp.dest('./dist/media'));
 };
 

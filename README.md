@@ -48,6 +48,7 @@ _PSG_ is using number of development dependencies, here are they:
 | browser-sync | https://www.npmjs.com/package/browser-sync | ^2.26.12
 | gulp | https://www.npmjs.com/package/gulp | ^4.0.2
 | gulp-autoprefixer | https://www.npmjs.com/package/gulp-autoprefixer | ^7.0.1
+| gulp-cache | https://www.npmjs.com/package/gulp-cache | ^1.1.3
 | gulp-clean | https://www.npmjs.com/package/gulp-clean | ^0.4.0
 | gulp-concat | https://www.npmjs.com/package/gulp-concat | ^2.6.1
 | gulp-imagemin | https://www.npmjs.com/package/gulp-imagemin | ^7.1.0
