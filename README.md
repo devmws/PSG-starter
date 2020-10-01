@@ -46,6 +46,7 @@ _PSG_ is using number of development dependencies, here are they:
 | Plugin name | source | version |
 | ------- | ------- | ------ |
 | browser-sync | https://www.npmjs.com/package/browser-sync | ^2.26.12
+| dotenv | https://www.npmjs.com/package/dotenv | ^8.2.0
 | gulp | https://www.npmjs.com/package/gulp | ^4.0.2
 | gulp-autoprefixer | https://www.npmjs.com/package/gulp-autoprefixer | ^7.0.1
 | gulp-cache | https://www.npmjs.com/package/gulp-cache | ^1.1.3
@@ -77,7 +78,7 @@ PSG requires [Node.js](https://nodejs.org/) v4+ to run. after making sure that i
 ```sh
 $ cd psg-starter
 $ npm i
-$ gulp generateDistFolder
+$ gulp generateDist
 $ gulp
 ```
 

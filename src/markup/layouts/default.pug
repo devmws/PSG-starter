@@ -9,9 +9,9 @@ html(lang="en" dir="ltr")
 		block pageTitle
 
 		block styles
-			link(rel="shortcut icon" href="./media/images/logoMin.png")
-			link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css")
-			link(rel="stylesheet" type="text/css" href="./styles/main.min.css")
+			link(rel="shortcut icon" href=`${mediaPath}/images/logoMin.png`)
+			link(rel="stylesheet" type="text/css" href=`${fontAwesomeCDN}`)
+			link(rel="stylesheet" type="text/css" href=`${stylesPath}/main.min.css`)
 
 	body
 		noscript
@@ -25,5 +25,5 @@ html(lang="en" dir="ltr")
 
 		include ../components/footer
 		block scripts
-			script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
-			script(type="module" src="./scripts/main.min.js")
+			script(src=`${jqueryCDN}`)
+			script(type="module" src=`${scriptsPath}/main.min.js`)

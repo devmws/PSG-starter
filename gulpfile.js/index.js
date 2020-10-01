@@ -11,13 +11,14 @@ const zipDev = async () => { return require('./zipDev')(); };
 // Watchers, initialization and custom tasks, and live-reload server
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const generateDistFolder = gulp.parallel(
+const generateDist = gulp.parallel(
 	compilePug,
 	compileScss,
 	moveRelated,
 	minifyPics,
 	minifyJs
 );
+
 const watcher = async () => {
 	browserSync.init({ server: { baseDir: './dist' } });
 	gulp.watch('./src/markup/**/*.pug', compilePug);
@@ -38,6 +39,6 @@ module.exports = {
 	deleteDist,
 	zipProd,
 	zipDev,
-	generateDistFolder,
+	generateDist,
 	default: watcher
 };
