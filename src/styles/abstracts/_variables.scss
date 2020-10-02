@@ -14,10 +14,6 @@ $theme: 'light';
 	$theme-colors: (
 		'primary': #0074d9,
 		'danger': #ff4136,
-	) !global;
-} @else if ($theme == 'dark') {
-	$theme-colors: (
-		'primary': #000,
-		'danger': #8a0700,
+		'white': #ffffff
 	) !global;
 }
